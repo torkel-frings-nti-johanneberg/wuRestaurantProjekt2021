@@ -25,9 +25,54 @@ body{
 #containerHome main{
     grid-area: m;
     background-color: sandybrown; /* inte permanent */
+    display: grid;
+    grid-template-areas: 
+    'slu slu slu slu aru sru sru'
+    'slu slu slu slu aru sru sru'
+    'sml sml sml sml sml ard ard'
+    'sdl sdl sdl sdl sdl ard ard'
+    ;
 }
+    #containerHome section.uppleft{
+        grid-area: slu;
+        background-color: indigo; /* inte permanent */
+    }
+    #containerHome section.uppright{
+        grid-area: sru;
+        background-color: ivory; /* inte permanent */
+    }
+    #containerHome section.middelleft{
+        grid-area: sml;
+        background-color: wheat; /* inte permanent */
+        display: grid;
+        grid-template-areas: 
+        'arl arr'
+        ;
+    }
+        #containerHome article.left{
+            grid-area: arl;
+            background-color: teal;
+        }
+        #containerHome article.right{
+            grid-area: arr;
+            background-color: red;
+        }
+
+    #containerHome section.dowenleft{
+        grid-area: sdl;
+        background-color: greenyellow; /* inte permanent */
+    }
+    #containerHome article.upp{
+        grid-area: aru;
+        background-color: gold; /* inte permanent */
+    }
+    #containerHome article.dowen{
+        grid-area: ard;
+        background-color: skyblue; /* inte permanent */
+    }
+    
 #containerHome aside{
-    grid-area: he;
+    grid-area: as;          /*fixed syntax error*/
     background-color: hotpink; /* inte permanent */
 }
 
