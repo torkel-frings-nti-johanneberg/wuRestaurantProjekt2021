@@ -5,6 +5,8 @@ body{
 #containerHome{
     display: grid;
     height: 100vh;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: 15% auto;
     grid-template-areas: 
     'he he he he he'   /* 1 */
     'm m m m as'    /* 2 */
@@ -16,15 +18,15 @@ body{
     ;
 }
 
-header{
+#containerHome header{
     grid-area: he;
     background-color: aquamarine; /* inte permanent */
 }
-main{
+#containerHome main{
     grid-area: m;
     background-color: sandybrown; /* inte permanent */
 }
-aside{
+#containerHome aside{
     grid-area: he;
     background-color: hotpink; /* inte permanent */
 }
