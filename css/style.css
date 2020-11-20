@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+}
+
+#containerHome{
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+    'he he he he he'   /* 1 */
+    'm m m m as'    /* 2 */
+    'm m m m as'    /* 3 */
+    'm m m m as'    /* 4 */
+    'm m m m as'    /* 5 */
+    'm m m m as'    /* 6 */
+    'm m m m as'    /* 7 */
+    ;
+}
+
+header{
+    grid-area: he;
+    background-color: aquamarine; /* inte permanent */
+}
+main{
+    grid-area: m;
+    background-color: sandybrown; /* inte permanent */
+}
+aside{
+    grid-area: he;
+    background-color: hotpink; /* inte permanent */
+}
+
