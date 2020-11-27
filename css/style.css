@@ -97,52 +97,32 @@ aside{
         grid-area: alu;
         background-color: red;
         display: grid;
-        grid-template-areas: 
-        'fig1u fig2u fig3u'
-        'fig1d fig2d fig3d'
-        ;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50% 50%;
     }
-        figure.1u{
-            grid-area:fig1u;
-        }
-        figure.2u{
-            grid-area:fig2u;
-        }
-        figure.3u{
-            grid-area:fig3u;
-        }
-        figure.1d{
-            grid-area:fig1d;
-        }
-        figure.2d{
-            grid-area:fig2d;
-        }
-        figure.3d{
-            grid-area:fig3d;
-        }
+
     #meny article.leftdowen{
         grid-area: ald;
         background-color: red;
-        grid-template-areas: 
-        'fig1u fig2u fig3u'
-        'fig1d fig2d fig3d'
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50% 50%;
+    }
+        
     }
     #meny article.rightupp{
         grid-area: aru;
         background-color: red;
-        grid-template-areas: 
-        'fig1u fig2u fig3u'
-        'fig1d fig2d fig3d'
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50% 50%;
     }
+       
     #meny article.rightdowen{
         grid-area: ard;
         background-color: red;
-        grid-template-areas: 
-        'fig1u fig2u fig3u'
-        'fig1d fig2d fig3d'
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50% 50%;
     }
     
-
 
 img{
     height: 15vh;
