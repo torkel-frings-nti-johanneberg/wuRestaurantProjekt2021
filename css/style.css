@@ -1,8 +1,9 @@
 body{
     margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#containerHome{
+#container{
     display: grid;
     height: 100vh;
     grid-template-columns: repeat(5, 20%);
@@ -18,14 +19,20 @@ body{
     ;
 }
 
-#containerHome header{
+header{
     grid-area: he;
     background-color: aquamarine; /* inte permanent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#containerHome main{
+#Home main{
     grid-area: m;
     background-color: sandybrown; /* inte permanent */
     display: grid;
+    grid-gap: 20px;
+    grid-template-columns: auto auto auto auto 15% 10% 10%;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
     'slu slu slu slu aru sru sru'
     'slu slu slu slu aru sru sru'
@@ -33,15 +40,15 @@ body{
     'sdl sdl sdl sdl sdl ard ard'
     ;
 }
-    #containerHome section.uppleft{
+    #Home section.uppleft{
         grid-area: slu;
         background-color: indigo; /* inte permanent */
     }
-    #containerHome section.uppright{
+    #Home section.uppright{
         grid-area: sru;
         background-color: ivory; /* inte permanent */
     }
-    #containerHome section.middelleft{
+    #Home section.middelleft{
         grid-area: sml;
         background-color: wheat; /* inte permanent */
         display: grid;
@@ -49,30 +56,100 @@ body{
         'arl arr'
         ;
     }
-        #containerHome article.left{
+        #Home article.left{
             grid-area: arl;
             background-color: teal;
         }
-        #containerHome article.right{
+        #Home article.right{
             grid-area: arr;
             background-color: red;
         }
 
-    #containerHome section.dowenleft{
+    #Home section.dowenleft{
         grid-area: sdl;
         background-color: greenyellow; /* inte permanent */
     }
-    #containerHome article.upp{
+    #Home article.upp{
         grid-area: aru;
         background-color: gold; /* inte permanent */
     }
-    #containerHome article.dowen{
+    #Home article.dowen{
         grid-area: ard;
         background-color: skyblue; /* inte permanent */
     }
-    
-#containerHome aside{
+aside{
     grid-area: as;          /*fixed syntax error*/
     background-color: hotpink; /* inte permanent */
+}
+#meny main{
+    grid-area: m;
+    background-color: sandybrown; 
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    'alu alu aru aru'
+    'ald ald ard ard'
+    ;
+} 
+    #meny article.leftupp{
+        grid-area: alu;
+        background-color: red;
+        display: grid;
+        grid-template-areas: 
+        'fig1u fig2u fig3u'
+        'fig1d fig2d fig3d'
+        ;
+    }
+        figure.1u{
+            grid-area:fig1u;
+        }
+        figure.2u{
+            grid-area:fig2u;
+        }
+        figure.3u{
+            grid-area:fig3u;
+        }
+        figure.1d{
+            grid-area:fig1d;
+        }
+        figure.2d{
+            grid-area:fig2d;
+        }
+        figure.3d{
+            grid-area:fig3d;
+        }
+    #meny article.leftdowen{
+        grid-area: ald;
+        background-color: red;
+        grid-template-areas: 
+        'fig1u fig2u fig3u'
+        'fig1d fig2d fig3d'
+    }
+    #meny article.rightupp{
+        grid-area: aru;
+        background-color: red;
+        grid-template-areas: 
+        'fig1u fig2u fig3u'
+        'fig1d fig2d fig3d'
+    }
+    #meny article.rightdowen{
+        grid-area: ard;
+        background-color: red;
+        grid-template-areas: 
+        'fig1u fig2u fig3u'
+        'fig1d fig2d fig3d'
+    }
+    
+
+
+img{
+    height: 15vh;
+}
+
+h1{
+    font-size: 15vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
