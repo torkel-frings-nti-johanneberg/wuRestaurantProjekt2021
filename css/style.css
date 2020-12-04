@@ -1,13 +1,16 @@
 body{
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow: hidden;
+    text-align: center;
+    color: white;
 }
 
 #container{
     display: grid;
     height: 100vh;
     grid-template-columns: repeat(5, 20%);
-    grid-template-rows: 15% auto;
+    grid-template-rows: 16% repeat(6,14%) auto;
     grid-template-areas: 
     'he he he he he'   /* 1 */
     'm m m m as'    /* 2 */
@@ -21,18 +24,18 @@ body{
 
 header{
     grid-area: he;
-    background-color: aquamarine; /* inte permanent */
+    background-color: #1FCACC; 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 #Home main{
     grid-area: m;
-    background-color: sandybrown; /* inte permanent */
+    
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 1%;
     grid-template-columns: auto auto auto auto 15% 10% 10%;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 17% 17% 30% 32%;
     grid-template-areas: 
     'slu slu slu slu aru sru sru'
     'slu slu slu slu aru sru sru'
@@ -42,60 +45,90 @@ header{
 }
     #Home section.uppleft{
         grid-area: slu;
-        background-color: indigo; /* inte permanent */
+        background-color: #39CC1F; /* inte permanent */
     }
     #Home section.uppright{
         grid-area: sru;
-        background-color: ivory; /* inte permanent */
+        background-color: #39CC1F; /* inte permanent */
     }
     #Home section.middelleft{
         grid-area: sml;
-        background-color: wheat; /* inte permanent */
+
         display: grid;
+        grid-template-columns: 50%50%;
         grid-template-areas: 
         'arl arr'
         ;
     }
         #Home article.left{
             grid-area: arl;
-            background-color: teal;
+            background-color: #CC2314;
         }
         #Home article.right{
             grid-area: arr;
-            background-color: red;
+            background-color: teal;
         }
 
     #Home section.dowenleft{
         grid-area: sdl;
-        background-color: greenyellow; /* inte permanent */
+
+        position: relative;
     }
+    #Home section img{
+        width: 100%;
+        height: 100%;
+        transition: .5s ease;
+    }
+    #Home section a{
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        padding: 27vh 50% 0;
+        background-color:black;
+    }
+    #Home section:hover a{
+        opacity: 0.2;
+        transform: (-50%, -50%);
+        -ms-transform: (-50%, -50%);
+    }     
+
     #Home article.upp{
         grid-area: aru;
-        background-color: gold; /* inte permanent */
+        background-color: #CC2314;
+        overflow: scroll;
     }
     #Home article.dowen{
         grid-area: ard;
-        background-color: skyblue; /* inte permanent */
+        background-color: teal;
     }
 aside{
-    grid-area: as;          /*fixed syntax error*/
-    background-color: hotpink; /* inte permanent */
+    grid-area: as;       
 }
 #meny main{
     grid-area: m;
-    background-color: sandybrown; 
+
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
+    grid-template-areas:    
     'alu alu aru aru'
     'ald ald ard ard'
     ;
 } 
     #meny article.leftupp{
         grid-area: alu;
-        background-color: red;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50% 50%;
+    }
+
+    #meny article.rightupp{
+        grid-area: aru;
+
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 50% 50%;
@@ -103,33 +136,58 @@ aside{
 
     #meny article.leftdowen{
         grid-area: ald;
-        background-color: red;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 50% 50%;
-    }
-        
-    }
-    #meny article.rightupp{
-        grid-area: aru;
-        background-color: red;
+
+        display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 50% 50%;
     }
        
     #meny article.rightdowen{
         grid-area: ard;
-        background-color: red;
+
+        display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 50% 50%;
     }
     
 
-img{
+img.loga{
     height: 15vh;
 }
-
-h1{
-    font-size: 15vh;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+img.mat{
+   width: 100%;
+   height: 50%;
+}
+img.add{
+    height: 100%;
+    width: 100%;
+}
+main img{
+    height: 100%;
+    width: 100%;
 }
 
+a{
+    text-decoration: none;
+    font-size: 12vh;
+    text-transform: uppercase;
+    font-family: Lucida Calligraphy, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+}
+
+p{
+    margin: 2px;
+    padding: 0;
+
+}
+h3{
+    padding: 0;
+    margin: 0;
+}
+#noscroll{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+#noscroll::-webkit-scrollbar{
+    display: none;
+}
