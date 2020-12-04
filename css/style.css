@@ -46,6 +46,7 @@ header{
     #Home section.uppleft{
         grid-area: slu;
         background-color: #39CC1F; /* inte permanent */
+        position: relative;
     }
     #Home section.uppright{
         grid-area: sru;
@@ -71,7 +72,6 @@ header{
 
     #Home section.dowenleft{
         grid-area: sdl;
-
         position: relative;
     }
     #Home section img{
@@ -85,7 +85,7 @@ header{
         position: absolute;
         top: 0%;
         left: 0%;
-        padding: 27vh 50% 0;
+        padding: 28% 50% 0;
         background-color:black;
     }
     #Home section:hover a{
@@ -149,7 +149,31 @@ aside{
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 50% 50%;
     }
-    
+
+#boka main{
+    grid-area: m;
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    grid-template-areas: 
+    's1 s2 s3 s4'
+    ;
+}
+    #boka section.furst{
+        grid-area: s1;
+        background-color: teal;
+    }
+    #boka section.secund{
+        grid-area: s2;
+        background-color:#CC2314;
+    }
+    #boka section.thered{
+        grid-area: s3;
+        background-color:  teal;
+    }
+    #boka section.forthe{
+        grid-area: s4;
+        background-color: #CC2314;
+    }
 
 img.loga{
     height: 15vh;
