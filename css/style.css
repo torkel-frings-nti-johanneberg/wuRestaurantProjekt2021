@@ -2,7 +2,6 @@ body{
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     overflow: hidden;
-    text-align: center;
     color: white;
 }
 
@@ -33,11 +32,10 @@ header{
     grid-area: m;
     
     display: grid;
-    grid-gap: 1%;
+
     grid-template-columns: auto auto auto auto 15% 10% 10%;
-    grid-template-rows: 17% 17% 30% 32%;
+    grid-template-rows: 33% 33% 33%;
     grid-template-areas: 
-    'slu slu slu slu aru sru sru'
     'slu slu slu slu aru sru sru'
     'sml sml sml sml sml ard ard'
     'sdl sdl sdl sdl sdl ard ard'
@@ -47,10 +45,12 @@ header{
         grid-area: slu;
         background-color: #39CC1F; /* inte permanent */
         position: relative;
+        border: solid;
     }
     #Home section.uppright{
         grid-area: sru;
         background-color: #39CC1F; /* inte permanent */
+        border: solid;
     }
     #Home section.middelleft{
         grid-area: sml;
@@ -63,16 +63,21 @@ header{
     }
         #Home article.left{
             grid-area: arl;
-            background-color: #CC2314;
+            background-color: teal;
+            overflow: scroll;
+            border: solid;
         }
         #Home article.right{
             grid-area: arr;
-            background-color: teal;
+            background-color: #008080;
+            overflow: scroll;
+            border: solid;
         }
 
     #Home section.dowenleft{
         grid-area: sdl;
         position: relative;
+        border: solid;
     }
     #Home section img{
         width: 100%;
@@ -85,23 +90,26 @@ header{
         position: absolute;
         top: 0%;
         left: 0%;
-        padding: 28% 50% 0;
+        padding: 26.6% 50% 0;
         background-color:black;
     }
     #Home section:hover a{
         opacity: 0.2;
-        transform: (-50%, -50%);
-        -ms-transform: (-50%, -50%);
+        transform: (-50% -50%);
+        -ms-transform: (-50% -50%);
     }     
 
     #Home article.upp{
         grid-area: aru;
-        background-color: #CC2314;
+        background-color: teal;
         overflow: scroll;
+        border: solid;
     }
     #Home article.dowen{
         grid-area: ard;
         background-color: teal;
+        overflow: scroll;
+        border: solid;
     }
 aside{
     grid-area: as;       
@@ -120,7 +128,8 @@ aside{
 } 
     #meny article.leftupp{
         grid-area: alu;
-
+        background-image: url(../img/jason-dent-28cOKYJmleo-unsplash.jpg);
+        background-size: cover;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 50% 50%;
@@ -128,7 +137,8 @@ aside{
 
     #meny article.rightupp{
         grid-area: aru;
-
+        background-image: url(../img/jason-dent-28cOKYJmleo-unsplash.jpg);
+        background-size: cover;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 50% 50%;
@@ -136,7 +146,8 @@ aside{
 
     #meny article.leftdowen{
         grid-area: ald;
-
+        background-image: url(../img/jason-dent-28cOKYJmleo-unsplash.jpg);
+        background-size: cover;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 50% 50%;
@@ -144,7 +155,8 @@ aside{
        
     #meny article.rightdowen{
         grid-area: ard;
-
+        background-image: url(../img/jason-dent-28cOKYJmleo-unsplash.jpg);
+        background-size: cover;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 50% 50%;
@@ -161,18 +173,22 @@ aside{
     #boka section.furst{
         grid-area: s1;
         background-color: teal;
+        border: solid;
     }
     #boka section.secund{
         grid-area: s2;
-        background-color:#CC2314;
+        background-color:teal;
+        border: solid;
     }
     #boka section.thered{
         grid-area: s3;
         background-color:  teal;
+        border: solid;
     }
     #boka section.forthe{
         grid-area: s4;
-        background-color: #CC2314;
+        background-color: teal;
+        border: solid;
     }
 
 img.loga{
@@ -191,6 +207,7 @@ main img{
     width: 100%;
 }
 
+
 a{
     text-decoration: none;
     font-size: 12vh;
@@ -200,12 +217,12 @@ a{
 }
 
 p{
-    margin: 2px;
-    padding: 0;
+    margin: 0;
+    padding: 2%;
 
 }
 h3{
-    padding: 0;
+    padding: 2%;
     margin: 0;
 }
 #noscroll{
